@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const path = require("path");
+//const path = require("path");
 const generateMarkdown = require("./generateMarkdown");
 
 //Creating questions for user input
@@ -13,22 +13,22 @@ inquirer
     },
     {
       type: "input",
-      message: "How will you install your project",
+      message: "How will you install your project?",
       name: "installation",
     },
     {
       type: "input",
-      message: "What are the usage",
+      message: "What are the usage?",
       name: "usage",
     },
     {
       type: "input",
-      message: "What is your GitHub URL",
+      message: "Write a description of this project?",
       name: "description",
     },
     {
       type: "list",
-      message: "What license will you use for this project",
+      message: "What license will you use for this project?",
       name: "license",
       choices: [
         "Apache License 2.0",
@@ -47,30 +47,70 @@ inquirer
     {
       type: "input",
       message: "How can others contribute to the project",
-      name: "contributors",
+      name: "contributors?",
     },
     {
       type: "input",
-      message: "How will you test this project",
+      message: "How will you test this project?",
       name: "test",
     },
     {
       type: "input",
-      message: "What is your GitHub username",
+      message: "What is your GitHub username?",
       name: "githubUsername",
     },
     {
       type: "input",
-      message: "What is your GitHub URL",
+      message: "What is your GitHub URL?",
       name: "githubUrl",
     },
     {
       type: "input",
-      message: "What is your email",
+      message: "What is your email?",
       name: "email",
     },
   ])
-  .then((response) => {
-    console.log(response);
+  .then((answers) => {
+    // Accessing the user's responses
+    const {
+      title,
+      installation,
+      usage,
+      description,
+      license,
+      contributors,
+      test,
+      githubUsername,
+      githubUrl,
+      email,
+    } = answers;
+
+    // Creating an object with the user's responses
+    const userResponses = {
+      title,
+      installation,
+      usage,
+      description,
+      license,
+      contributors,
+      test,
+      githubUsername,
+      githubUrl,
+      email,
+    };
+
+    // Generating the markdown content using the user's responses
+    const markdownContent = generateMarkdown(userResponses);
+
+    // Writing the markdown content to a file
+    fs.writeFile("README.md", markdownContent, (err) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log("README.md file has been successfully generated!");
+      }
+    });
+  })
+  .catch((error) => {
+    console.log(error);
   });
-//const readme =
