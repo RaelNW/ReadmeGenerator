@@ -1,6 +1,5 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-//const path = require("path");
 const generateMarkdown = require("./generateMarkdown");
 
 //Creating questions for user input
@@ -18,7 +17,7 @@ inquirer
     },
     {
       type: "input",
-      message: "What are the usage?",
+      message: "What is the usage?",
       name: "usage",
     },
     {
