@@ -1,10 +1,5 @@
 //generate license budge based on the value of the license
-function renderLicenseBadge(license) {
-  if (license !== "none") {
-    return `![Github license] (https://img.shields.io/badge/license-${license}-blue.svg)`;
-  }
-  return "";
-}
+
 
 //Creating a function to generate markdown for README
 function generateMarkdown(data) {
