@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./generateMarkdown");
-let licenseBadge = "";
+
 
 //Creating questions for user input
 inquirer
@@ -61,44 +61,13 @@ inquirer
     },
     {
       type: "input",
-      message: "What is your GitHub URL?",
-      name: "githubUrl",
-    },
-    {
-      type: "input",
       message: "What is your email?",
       name: "email",
     },
   ])
 
-  .then((response) => { /* selection of badge license parameter */
-  switch (response.license) {
-    case "Apache License 2.0":
-      badge = "License-Apache%202.0-blue"
-      break;
-    case "GNU":
-      badge = "License-GPL%20v3-blue"
-      break;
-    case "MIT License":
-      badge = "License-MIT-yellow"
-      break; 
-    case "BSD 2-Clause simplified":
-      badge = "License-BSD%202--Clause-orange"
-      break;
-    case "BSD 3-Clause New or Revised":
-      badge = "License-BSD%203--Clause-blue"
-      break;
-    case "Eclipse Public License":
-      badge = "License-EPL%201.0-red"
-      break;
-    case "Mozilla Public License":
-      badge = "License-MPL%202.0-brightgreen"
-      break;
-    case "The Unlicense":
-      badge = license-Unlicense-blue
-      break;
-  }
- 
+.then((userResponses) => {
+  
 
     // Generating the markdown content using the user's responses
     const markdownContent = generateMarkdown(userResponses);
