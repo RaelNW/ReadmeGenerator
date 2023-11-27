@@ -57,6 +57,7 @@ ${data.description}
 * [Contributors](#contributors)
 * [Tests](#tests)
 * [License](#license)
+* [Screenshot](#screenshot)
 * [Questions](#questions)
 
 ## Installation
@@ -73,6 +74,9 @@ ${data.test}
 
 ## License
 ${data.license}
+
+## Screenshot
+![Screenshot](./${data.screenshot})
 
 ## Questions
 For questions or additional information, please contact me via email at ${data.email} or visit my [GitHub profile](https://github.com/${data.githubUsername}).

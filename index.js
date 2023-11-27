@@ -64,6 +64,11 @@ inquirer
       message: "What is your email?",
       name: "email",
     },
+    {
+      type: "input",
+      message: "What is path to the example ReadMe?",
+      name: "screenshot",
+    }
   ])
 
 .then((userResponses) => {

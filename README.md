@@ -1,20 +1,33 @@
-# Some Project 
-![Github license] (https://img.shields.io/badge/license-MIT License-blue.svg)
+# SomethingNew
+<img src="https://img.shields.io/badge/License-MIT-yellow.svg">
 ## Description
-This is a meal tracker to create menus and record meal counts for elderly. Meal counts may be based on a person’s schedules or attendance then manually adjusted as needed to reflect actual meals served each day.
+The project is to help me generate areadme.md using prompts
 ## Table of Contents
 * [Installation](#installation)
-* [How to use the application](#usage)
+* [Usage](#usage)
 * [Contributors](#contributors)
-* [Testing](#testing)
+* [Tests](#tests)
+* [License](#license)
+* [Screenshot](#screenshot)
 * [Questions](#questions)
+
 ## Installation
-App Store
-## How to Use This Application:
-To keep track of meal intake
+I will clone the repo to my directory
+
+## Usage
+This is to generate a readme.md
+
 ## Contributors
 undefined
-## Testing
-Manual testing
+
+## Tests
+I will manually test the project
+
+## License
+MIT License
+
+## Screenshot
+![Screenshot](./readmeExample.png)
+
 ## Questions
-Please send your questions [here](mailto:someemail@gmail.com or visit my github page, my user name is RaelNW and this is my github url https://github.com/RaelNW
+For questions or additional information, please contact me via email at raeln@gmail.com or visit my [GitHub profile](https://github.com/RaelNW).
